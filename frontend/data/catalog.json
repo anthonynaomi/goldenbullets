@@ -1,0 +1,488 @@
+{
+  "_comment": "Demo catalogue used by the bundled dev API (server.js). Replace every bracketed placeholder with the label-approved wording before launch. Reviews are intentionally absent: testimonials are only rendered from verified reviews returned by the live API.",
+  "config": {
+      "storeName": "Golden Bullet",
+      "tagline": "Stay Golden",
+      "baseCurrency": "USD",
+      "defaultCurrency": "USD",
+      "defaultCountry": "US",
+      "freeShippingThreshold": 100,
+      "supportEmail": "hello@mygoldenbullets.com",
+      "supportPhone": "+234 000 000 0000",
+      "supportHours": "Monday to Friday, 09:00-17:00 WAT",
+      "registrationLine": "Golden Bullet 380 is registered with [REGULATOR NAME] under registration number [REGISTRATION NO. PLACEHOLDER].",
+      "medicalNotice": "This product is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare professional before use.",
+      "socials": [
+        { "name": "Facebook", "href": "https://facebook.com/", "icon": "facebook" },
+        { "name": "Instagram", "href": "https://instagram.com/", "icon": "instagram" },
+        { "name": "TikTok", "href": "https://tiktok.com/", "icon": "tiktok" },
+        { "name": "X", "href": "https://x.com/", "icon": "x" }
+      ],
+      "payments": ["Visa", "Mastercard", "Verve", "Paystack", "Bank transfer"],
+      "discountCodes": {
+        "GOLDEN15": { "type": "percent", "value": 15, "label": "15% off" },
+        "STAYGOLDEN": { "type": "percent", "value": 10, "label": "10% off" },
+        "FREESHIP": { "type": "fixed", "value": 6, "label": "Free standard delivery" }
+      },
+      "currencies": [
+        { "code": "USD", "symbol": "$", "name": "US Dollar", "rate": 1, "locale": "en-US", "decimals": 2 },
+        { "code": "NGN", "symbol": "₦", "name": "Nigerian Naira", "rate": 1550, "locale": "en-NG", "decimals": 2 },
+        { "code": "GBP", "symbol": "£", "name": "Pound Sterling", "rate": 0.79, "locale": "en-GB", "decimals": 2 },
+        { "code": "EUR", "symbol": "€", "name": "Euro", "rate": 0.92, "locale": "en-IE", "decimals": 2 },
+        { "code": "ZAR", "symbol": "R", "name": "South African Rand", "rate": 18.2, "locale": "en-ZA", "decimals": 2 },
+        { "code": "KES", "symbol": "KSh", "name": "Kenyan Shilling", "rate": 129, "locale": "en-KE", "decimals": 2 },
+        { "code": "GHS", "symbol": "GH₵", "name": "Ghanaian Cedi", "rate": 15.6, "locale": "en-GH", "decimals": 2 }
+      ],
+      "countries": [
+        { "code": "NG", "name": "Nigeria", "currency": "NGN" },
+        { "code": "US", "name": "United States", "currency": "USD" },
+        { "code": "GB", "name": "United Kingdom", "currency": "GBP" },
+        { "code": "IE", "name": "Ireland", "currency": "EUR" },
+        { "code": "ZA", "name": "South Africa", "currency": "ZAR" },
+        { "code": "KE", "name": "Kenya", "currency": "KES" },
+        { "code": "GH", "name": "Ghana", "currency": "GHS" },
+        { "code": "OT", "name": "Rest of world", "currency": "USD" }
+      ]
+    },
+  "products": [
+    {
+      "id": "gb-380-1",
+      "slug": "golden-bullet-380-single-pack",
+      "name": "Golden Bullet 380 — Single Pack (1 Tablet)",
+      "shortName": "1 chewable tablet",
+      "collection": "Golden Bullet 380",
+      "sku": "GB380-1",
+      "packSize": 1,
+      "packLabel": "1 tablet pack",
+      "price": 39,
+      "compareAt": null,
+      "inStock": true,
+      "stockQty": 240,
+      "featured": true,
+      "bestSeller": true,
+      "requiresPrescription": false,
+      "netContent": "1 chewable tablet (1.4 g)",
+      "tags": ["single pack", "chewable tablet", "trial"],
+      "summary": "[APPROVED CLAIM FROM LABEL]",
+      "description": [
+        "[APPROVED CLAIM FROM LABEL]",
+        "Golden Bullet 380 is supplied as a single chewable tablet in a sealed, tamper-evident pack. The pack carries the full ingredient list, dosage and directions, warnings, storage instructions, batch number, expiry date and regulator registration number.",
+        "This single tablet pack is intended for adults aged 18 and over. Read the pack and the safety information page before use, and speak to a healthcare professional if you take any medication or have a medical condition."
+      ],
+      "images": [
+        { "src": "assets/img/pack-1.jpg", "alt": "Single Golden Bullet 380 capsule on a light background" },
+        { "src": "assets/img/product-single.jpg", "alt": "Golden Bullet 380 capsule with snow lotus flower and loose tablets on a cream background" },
+        { "src": "assets/img/capsule-light.jpg", "alt": "Golden Bullet 380 capsule on a light background with orbit lines" }
+      ],
+      "label": {
+        "netContent": "1 chewable tablet (1.4 g)",
+        "ingredients": [
+          "Cordyceps (Cordyceps sinensis) extract — [AMOUNT FROM LABEL]",
+          "Siberian Ginseng (Eleutherococcus senticosus) root extract — [AMOUNT FROM LABEL]",
+          "Snow Lotus Flower (Saussurea involucrata) extract — [AMOUNT FROM LABEL]",
+          "[REMAINING INGREDIENTS AND EXCIPIENTS FROM LABEL]"
+        ],
+        "dosage": "[DOSAGE FROM LABEL — e.g. one tablet, swallowed with water, not more than once in 24 hours.]",
+        "directions": [
+          "[DIRECTION 1 FROM LABEL]",
+          "[DIRECTION 2 FROM LABEL]",
+          "[DIRECTION 3 FROM LABEL]",
+          "[DIRECTION 4 FROM LABEL]"
+        ],
+        "warnings": [
+          "Do not use with nitrate medication, including nitroglycerin, or any medicine used to treat chest pain.",
+          "Consult a doctor before use if you have a heart condition, high or low blood pressure, diabetes, liver or kidney problems, or any other medical condition.",
+          "Consult a doctor if you take other medication, including prescription, over-the-counter or herbal products.",
+          "Do not use if you are under 18, pregnant, or breastfeeding.",
+          "Stop use and seek medical advice if you experience chest pain, an irregular heartbeat, dizziness, fainting, or a persistent erection lasting more than four hours.",
+          "Keep out of reach of children. Do not use after the expiry date printed on the pack."
+        ],
+        "storage": "[STORAGE INSTRUCTIONS FROM LABEL — store below 25°C in the original pack, away from direct sunlight, heat and moisture. Keep out of reach of children.]",
+        "batchNumber": "GB380-26A-0118",
+        "expiryDate": "2028-05",
+        "registrationNo": "[REGISTRATION NO. PLACEHOLDER]",
+        "manufacturer": "[MANUFACTURER NAME AND ADDRESS FROM LABEL]"
+      }
+    },
+    {
+      "id": "gb-380-3",
+      "slug": "golden-bullet-380-3-pack",
+      "name": "Golden Bullet 380 — 3 Tablet Pack",
+      "shortName": "3 chewable tablets",
+      "collection": "Golden Bullet 380",
+      "sku": "GB380-3",
+      "packSize": 3,
+      "packLabel": "3 tablet pack",
+      "price": 99,
+      "compareAt": 119,
+      "inStock": true,
+      "stockQty": 96,
+      "featured": false,
+      "bestSeller": true,
+      "requiresPrescription": false,
+      "netContent": "3 chewable tablets (4.2 g)",
+      "tags": ["3 pack", "chewable tablet", "bundle"],
+      "summary": "[APPROVED CLAIM FROM LABEL]",
+      "description": [
+        "[APPROVED CLAIM FROM LABEL]",
+        "The 3 tablet pack contains three sealed single-tablet packs. Each tablet pack carries the full ingredient list, dosage and directions, warnings, storage instructions, batch number, expiry date and regulator registration number.",
+        "Intended for adults aged 18 and over. Read the pack and the safety information page before use, and speak to a healthcare professional if you take any medication or have a medical condition."
+      ],
+      "images": [
+        { "src": "assets/img/pack-3.jpg", "alt": "Three Golden Bullet 380 capsules on a light background" },
+        { "src": "assets/img/product-single.jpg", "alt": "Golden Bullet 380 capsule with snow lotus flower and loose tablets" },
+        { "src": "assets/img/capsule-light.jpg", "alt": "Golden Bullet 380 capsule on a light background with orbit lines" }
+      ],
+      "label": {
+        "netContent": "3 chewable tablets (4.2 g)",
+        "ingredients": [
+          "Cordyceps (Cordyceps sinensis) extract — [AMOUNT FROM LABEL]",
+          "Siberian Ginseng (Eleutherococcus senticosus) root extract — [AMOUNT FROM LABEL]",
+          "Snow Lotus Flower (Saussurea involucrata) extract — [AMOUNT FROM LABEL]",
+          "[REMAINING INGREDIENTS AND EXCIPIENTS FROM LABEL]"
+        ],
+        "dosage": "[DOSAGE FROM LABEL — e.g. one tablet, swallowed with water, not more than once in 24 hours.]",
+        "directions": [
+          "[DIRECTION 1 FROM LABEL]",
+          "[DIRECTION 2 FROM LABEL]",
+          "[DIRECTION 3 FROM LABEL]",
+          "[DIRECTION 4 FROM LABEL]"
+        ],
+        "warnings": [
+          "Do not use with nitrate medication, including nitroglycerin, or any medicine used to treat chest pain.",
+          "Consult a doctor before use if you have a heart condition, high or low blood pressure, diabetes, liver or kidney problems, or any other medical condition.",
+          "Consult a doctor if you take other medication, including prescription, over-the-counter or herbal products.",
+          "Do not use if you are under 18, pregnant, or breastfeeding.",
+          "Stop use and seek medical advice if you experience chest pain, an irregular heartbeat, dizziness, fainting, or a persistent erection lasting more than four hours.",
+          "Keep out of reach of children. Do not use after the expiry date printed on the pack."
+        ],
+        "storage": "[STORAGE INSTRUCTIONS FROM LABEL — store below 25°C in the original pack, away from direct sunlight, heat and moisture. Keep out of reach of children.]",
+        "batchNumber": "GB380-26A-0284",
+        "expiryDate": "2028-07",
+        "registrationNo": "[REGISTRATION NO. PLACEHOLDER]",
+        "manufacturer": "[MANUFACTURER NAME AND ADDRESS FROM LABEL]"
+      }
+    },
+    {
+      "id": "gb-380-6",
+      "slug": "golden-bullet-380-6-pack",
+      "name": "Golden Bullet 380 — 6 Tablet Pack",
+      "shortName": "6 chewable tablets",
+      "collection": "Golden Bullet 380",
+      "sku": "GB380-6",
+      "packSize": 6,
+      "packLabel": "6 tablet pack",
+      "price": 179,
+      "compareAt": 219,
+      "inStock": true,
+      "stockQty": 54,
+      "featured": false,
+      "bestSeller": true,
+      "requiresPrescription": false,
+      "netContent": "6 chewable tablets (8.4 g)",
+      "tags": ["6 pack", "chewable tablet", "best value"],
+      "summary": "[APPROVED CLAIM FROM LABEL]",
+      "description": [
+        "[APPROVED CLAIM FROM LABEL]",
+        "The 6 tablet pack contains six sealed single-tablet packs. Each tablet pack carries the full ingredient list, dosage and directions, warnings, storage instructions, batch number, expiry date and regulator registration number.",
+        "Intended for adults aged 18 and over. Read the pack and the safety information page before use, and speak to a healthcare professional if you take any medication or have a medical condition."
+      ],
+      "images": [
+        { "src": "assets/img/pack-6.jpg", "alt": "Six Golden Bullet 380 capsules arranged in a group on a light background" },
+        { "src": "assets/img/product-single.jpg", "alt": "Golden Bullet 380 capsule with snow lotus flower and loose tablets" },
+        { "src": "assets/img/capsule-light.jpg", "alt": "Golden Bullet 380 capsule on a light background with orbit lines" }
+      ],
+      "label": {
+        "netContent": "6 chewable tablets (8.4 g)",
+        "ingredients": [
+          "Cordyceps (Cordyceps sinensis) extract — [AMOUNT FROM LABEL]",
+          "Siberian Ginseng (Eleutherococcus senticosus) root extract — [AMOUNT FROM LABEL]",
+          "Snow Lotus Flower (Saussurea involucrata) extract — [AMOUNT FROM LABEL]",
+          "[REMAINING INGREDIENTS AND EXCIPIENTS FROM LABEL]"
+        ],
+        "dosage": "[DOSAGE FROM LABEL — e.g. one tablet, swallowed with water, not more than once in 24 hours.]",
+        "directions": [
+          "[DIRECTION 1 FROM LABEL]",
+          "[DIRECTION 2 FROM LABEL]",
+          "[DIRECTION 3 FROM LABEL]",
+          "[DIRECTION 4 FROM LABEL]"
+        ],
+        "warnings": [
+          "Do not use with nitrate medication, including nitroglycerin, or any medicine used to treat chest pain.",
+          "Consult a doctor before use if you have a heart condition, high or low blood pressure, diabetes, liver or kidney problems, or any other medical condition.",
+          "Consult a doctor if you take other medication, including prescription, over-the-counter or herbal products.",
+          "Do not use if you are under 18, pregnant, or breastfeeding.",
+          "Stop use and seek medical advice if you experience chest pain, an irregular heartbeat, dizziness, fainting, or a persistent erection lasting more than four hours.",
+          "Keep out of reach of children. Do not use after the expiry date printed on the pack."
+        ],
+        "storage": "[STORAGE INSTRUCTIONS FROM LABEL — store below 25°C in the original pack, away from direct sunlight, heat and moisture. Keep out of reach of children.]",
+        "batchNumber": "GB380-26A-0311",
+        "expiryDate": "2028-09",
+        "registrationNo": "[REGISTRATION NO. PLACEHOLDER]",
+        "manufacturer": "[MANUFACTURER NAME AND ADDRESS FROM LABEL]"
+      }
+    },
+    {
+      "id": "gb-380-trial",
+      "slug": "golden-bullet-380-trial-blister",
+      "name": "Golden Bullet 380 — Trial Blister (1 Tablet)",
+      "shortName": "1 chewable tablet",
+      "collection": "Golden Bullet 380",
+      "sku": "GB380-T1",
+      "packSize": 1,
+      "packLabel": "1 tablet trial blister",
+      "price": 29,
+      "compareAt": null,
+      "inStock": true,
+      "stockQty": 320,
+      "featured": true,
+      "bestSeller": false,
+      "requiresPrescription": false,
+      "netContent": "1 chewable tablet (1.4 g)",
+      "tags": ["trial", "single blister", "chewable tablet"],
+      "summary": "[APPROVED CLAIM FROM LABEL]",
+      "description": [
+        "[APPROVED CLAIM FROM LABEL]",
+        "The trial blister holds one sealed chewable tablet in a tamper-evident foil. The pack carries the full ingredient list, dosage and directions, warnings, storage instructions, batch number, expiry date and regulator registration number.",
+        "Intended for adults aged 18 and over. Read the pack and the safety information page before use, and speak to a healthcare professional if you take any medication or have a medical condition."
+      ],
+      "images": [
+        { "src": "assets/img/capsule-light.jpg", "alt": "Golden Bullet 380 capsule on a light background with orbit lines" },
+        { "src": "assets/img/product-single.jpg", "alt": "Golden Bullet 380 capsule with snow lotus flower and loose tablets on a cream background" },
+        { "src": "assets/img/pack-1.jpg", "alt": "Single Golden Bullet 380 capsule on a light background" }
+      ],
+      "label": {
+        "netContent": "1 chewable tablet (1.4 g)",
+        "ingredients": [
+          "Cordyceps (Cordyceps sinensis) extract — [AMOUNT FROM LABEL]",
+          "Siberian Ginseng (Eleutherococcus senticosus) root extract — [AMOUNT FROM LABEL]",
+          "Snow Lotus Flower (Saussurea involucrata) extract — [AMOUNT FROM LABEL]",
+          "[REMAINING INGREDIENTS AND EXCIPIENTS FROM LABEL]"
+        ],
+        "dosage": "[DOSAGE FROM LABEL — e.g. one tablet, swallowed with water, not more than once in 24 hours.]",
+        "directions": [
+          "[DIRECTION 1 FROM LABEL]",
+          "[DIRECTION 2 FROM LABEL]",
+          "[DIRECTION 3 FROM LABEL]",
+          "[DIRECTION 4 FROM LABEL]"
+        ],
+        "warnings": [
+          "Do not use with nitrate medication, including nitroglycerin, or any medicine used to treat chest pain.",
+          "Consult a doctor before use if you have a heart condition, high or low blood pressure, diabetes, liver or kidney problems, or any other medical condition.",
+          "Consult a doctor if you take other medication, including prescription, over-the-counter or herbal products.",
+          "Do not use if you are under 18, pregnant, or breastfeeding.",
+          "Stop use and seek medical advice if you experience chest pain, an irregular heartbeat, dizziness, fainting, or a persistent erection lasting more than four hours.",
+          "Keep out of reach of children. Do not use after the expiry date printed on the pack."
+        ],
+        "storage": "[STORAGE INSTRUCTIONS FROM LABEL — store below 25°C in the original pack, away from direct sunlight, heat and moisture. Keep out of reach of children.]",
+        "batchNumber": "GB380-26A-0402",
+        "expiryDate": "2028-10",
+        "registrationNo": "[REGISTRATION NO. PLACEHOLDER]",
+        "manufacturer": "[MANUFACTURER NAME AND ADDRESS FROM LABEL]"
+      }
+    },
+    {
+      "id": "gb-380-2",
+      "slug": "golden-bullet-380-2-pack",
+      "name": "Golden Bullet 380 — Duo Pack (2 Tablets)",
+      "shortName": "2 chewable tablets",
+      "collection": "Golden Bullet 380",
+      "sku": "GB380-2",
+      "packSize": 2,
+      "packLabel": "2 tablet pack",
+      "price": 59,
+      "compareAt": 78,
+      "inStock": true,
+      "stockQty": 180,
+      "featured": true,
+      "bestSeller": false,
+      "requiresPrescription": false,
+      "netContent": "2 chewable tablets (2.8 g)",
+      "tags": ["2 pack", "chewable tablet", "starter"],
+      "summary": "[APPROVED CLAIM FROM LABEL]",
+      "description": [
+        "[APPROVED CLAIM FROM LABEL]",
+        "The duo pack contains two sealed single-tablet packs. Each tablet pack carries the full ingredient list, dosage and directions, warnings, storage instructions, batch number, expiry date and regulator registration number.",
+        "Intended for adults aged 18 and over. Read the pack and the safety information page before use, and speak to a healthcare professional if you take any medication or have a medical condition."
+      ],
+      "images": [
+        { "src": "assets/img/pack-2.jpg", "alt": "Two Golden Bullet 380 capsules side by side on a light background" },
+        { "src": "assets/img/product-single.jpg", "alt": "Golden Bullet 380 capsule with snow lotus flower and loose tablets on a cream background" },
+        { "src": "assets/img/pack-1.jpg", "alt": "Single Golden Bullet 380 capsule on a light background" }
+      ],
+      "label": {
+        "netContent": "2 chewable tablets (2.8 g)",
+        "ingredients": [
+          "Cordyceps (Cordyceps sinensis) extract — [AMOUNT FROM LABEL]",
+          "Siberian Ginseng (Eleutherococcus senticosus) root extract — [AMOUNT FROM LABEL]",
+          "Snow Lotus Flower (Saussurea involucrata) extract — [AMOUNT FROM LABEL]",
+          "[REMAINING INGREDIENTS AND EXCIPIENTS FROM LABEL]"
+        ],
+        "dosage": "[DOSAGE FROM LABEL — e.g. one tablet, swallowed with water, not more than once in 24 hours.]",
+        "directions": [
+          "[DIRECTION 1 FROM LABEL]",
+          "[DIRECTION 2 FROM LABEL]",
+          "[DIRECTION 3 FROM LABEL]",
+          "[DIRECTION 4 FROM LABEL]"
+        ],
+        "warnings": [
+          "Do not use with nitrate medication, including nitroglycerin, or any medicine used to treat chest pain.",
+          "Consult a doctor before use if you have a heart condition, high or low blood pressure, diabetes, liver or kidney problems, or any other medical condition.",
+          "Consult a doctor if you take other medication, including prescription, over-the-counter or herbal products.",
+          "Do not use if you are under 18, pregnant, or breastfeeding.",
+          "Stop use and seek medical advice if you experience chest pain, an irregular heartbeat, dizziness, fainting, or a persistent erection lasting more than four hours.",
+          "Keep out of reach of children. Do not use after the expiry date printed on the pack."
+        ],
+        "storage": "[STORAGE INSTRUCTIONS FROM LABEL — store below 25°C in the original pack, away from direct sunlight, heat and moisture. Keep out of reach of children.]",
+        "batchNumber": "GB380-26A-0455",
+        "expiryDate": "2028-11",
+        "registrationNo": "[REGISTRATION NO. PLACEHOLDER]",
+        "manufacturer": "[MANUFACTURER NAME AND ADDRESS FROM LABEL]"
+      }
+    },
+    {
+      "id": "gb-380-12",
+      "slug": "golden-bullet-380-12-pack",
+      "name": "Golden Bullet 380 — Twelve Pack (12 Tablets)",
+      "shortName": "12 chewable tablets",
+      "collection": "Golden Bullet 380",
+      "sku": "GB380-12",
+      "packSize": 12,
+      "packLabel": "12 tablet pack",
+      "price": 319,
+      "compareAt": 389,
+      "inStock": true,
+      "stockQty": 36,
+      "featured": false,
+      "bestSeller": true,
+      "requiresPrescription": false,
+      "netContent": "12 chewable tablets (16.8 g)",
+      "tags": ["12 pack", "chewable tablet", "best value"],
+      "summary": "[APPROVED CLAIM FROM LABEL]",
+      "description": [
+        "[APPROVED CLAIM FROM LABEL]",
+        "The twelve pack contains twelve sealed single-tablet packs. Each tablet pack carries the full ingredient list, dosage and directions, warnings, storage instructions, batch number, expiry date and regulator registration number.",
+        "Intended for adults aged 18 and over. Read the pack and the safety information page before use, and speak to a healthcare professional if you take any medication or have a medical condition."
+      ],
+      "images": [
+        { "src": "assets/img/product-single.jpg", "alt": "Golden Bullet 380 capsule with snow lotus flower and loose tablets on a cream background" },
+        { "src": "assets/img/pack-6.jpg", "alt": "Six Golden Bullet 380 capsules arranged in a group on a light background" },
+        { "src": "assets/img/capsule-light.jpg", "alt": "Golden Bullet 380 capsule on a light background with orbit lines" }
+      ],
+      "label": {
+        "netContent": "12 chewable tablets (16.8 g)",
+        "ingredients": [
+          "Cordyceps (Cordyceps sinensis) extract — [AMOUNT FROM LABEL]",
+          "Siberian Ginseng (Eleutherococcus senticosus) root extract — [AMOUNT FROM LABEL]",
+          "Snow Lotus Flower (Saussurea involucrata) extract — [AMOUNT FROM LABEL]",
+          "[REMAINING INGREDIENTS AND EXCIPIENTS FROM LABEL]"
+        ],
+        "dosage": "[DOSAGE FROM LABEL — e.g. one tablet, swallowed with water, not more than once in 24 hours.]",
+        "directions": [
+          "[DIRECTION 1 FROM LABEL]",
+          "[DIRECTION 2 FROM LABEL]",
+          "[DIRECTION 3 FROM LABEL]",
+          "[DIRECTION 4 FROM LABEL]"
+        ],
+        "warnings": [
+          "Do not use with nitrate medication, including nitroglycerin, or any medicine used to treat chest pain.",
+          "Consult a doctor before use if you have a heart condition, high or low blood pressure, diabetes, liver or kidney problems, or any other medical condition.",
+          "Consult a doctor if you take other medication, including prescription, over-the-counter or herbal products.",
+          "Do not use if you are under 18, pregnant, or breastfeeding.",
+          "Stop use and seek medical advice if you experience chest pain, an irregular heartbeat, dizziness, fainting, or a persistent erection lasting more than four hours.",
+          "Keep out of reach of children. Do not use after the expiry date printed on the pack."
+        ],
+        "storage": "[STORAGE INSTRUCTIONS FROM LABEL — store below 25°C in the original pack, away from direct sunlight, heat and moisture. Keep out of reach of children.]",
+        "batchNumber": "GB380-26A-0501",
+        "expiryDate": "2029-01",
+        "registrationNo": "[REGISTRATION NO. PLACEHOLDER]",
+        "manufacturer": "[MANUFACTURER NAME AND ADDRESS FROM LABEL]"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-1",
+      "slug": "understanding-erectile-dysfunction-when-to-see-a-doctor",
+      "title": "Understanding Erectile Dysfunction: When to Talk to a Doctor",
+      "category": "Men's health",
+      "publishedAt": "2026-09-18",
+      "readingMinutes": 6,
+      "image": "assets/img/capsule-light.jpg",
+      "excerpt": "Erectile difficulties are common and often have a physical cause. Here is what a clinician will want to know, and why self-treatment can be risky.",
+      "body": [
+        { "type": "p", "text": "This article is general education. It is not medical advice and it does not describe what any supplement can do. If you are experiencing erectile difficulties, speak to a doctor or pharmacist." },
+        { "type": "h2", "text": "It is more common than most men think" },
+        { "type": "p", "text": "Occasional difficulty is common and is often linked to stress, tiredness, alcohol, or a temporary change in circumstances. Difficulty that continues over weeks or months is worth investigating, because it can be an early sign of a condition that needs treatment, such as cardiovascular disease or diabetes." },
+        { "type": "h2", "text": "What a clinician will ask" },
+        { "type": "list", "items": [
+          "When the difficulty started, and whether it is occasional or consistent.",
+          "Any medication you take, including blood pressure medicines, antidepressants and hair-loss treatments.",
+          "Your cardiovascular history, including chest pain, palpitations and blood pressure readings.",
+          "Lifestyle factors such as sleep, alcohol, smoking and physical activity.",
+          "Whether morning erections have changed."
+        ] },
+        { "type": "h2", "text": "Why self-treatment can be risky" },
+        { "type": "p", "text": "Some prescription treatments for erectile dysfunction interact dangerously with nitrate medication and with medicines used for chest pain. Buying treatment without a consultation can mean missing that interaction, or missing a diagnosis that needs attention." },
+        { "type": "quote", "text": "Never take a medicine for erectile dysfunction together with nitrate medication. If you have chest pain, seek urgent medical care." },
+        { "type": "h2", "text": "Where supplements fit" },
+        { "type": "p", "text": "Supplements are not medicines. They are not intended to diagnose, treat, cure, or prevent any disease, and they are not a substitute for a clinical assessment. If you choose to use one alongside your normal care, show the label to your pharmacist or doctor so they can check it against your medication." },
+        { "type": "p", "text": "[CONTENT PLACEHOLDER — add any wording approved by your regulatory and legal reviewers.]" }
+      ]
+    },
+    {
+      "id": "post-2",
+      "slug": "how-to-read-a-supplement-label",
+      "title": "How to Read a Supplement Label Before You Buy",
+      "category": "Buying guide",
+      "publishedAt": "2026-09-25",
+      "readingMinutes": 5,
+      "image": "assets/img/product-single.jpg",
+      "excerpt": "Ingredient list, dosage, warnings, storage, batch number, expiry date and a registration number. Use this checklist before any purchase.",
+      "body": [
+        { "type": "p", "text": "A complete label is the most useful thing on any supplement pack. If a seller cannot show you one before you buy, that is a reason to pause." },
+        { "type": "h2", "text": "The label checklist" },
+        { "type": "ordered", "items": [
+          "Full ingredient list, including excipients, with amounts where required.",
+          "Dosage and directions, including the maximum amount in 24 hours.",
+          "Warnings and contraindications, including medicines and conditions that rule out use.",
+          "Storage instructions and the shelf life after opening.",
+          "Batch or lot number and expiry date, printed on the pack itself.",
+          "The regulator registration number and the name and address of the manufacturer or distributor."
+        ] },
+        { "type": "h2", "text": "Questions worth asking" },
+        { "type": "list", "items": [
+          "Does the seller publish the full ingredient list before checkout?",
+          "Is there a documented batch number that can be traced to a manufacturing record?",
+          "Are the warnings specific, or is the label vague about who should not use it?",
+          "Is the product advertised with promises that no supplement is allowed to make?"
+        ] },
+        { "type": "h2", "text": "Red flags" },
+        { "type": "p", "text": "Treat claims that a supplement cures or treats a disease, works for everyone, or has no possible side effects as a warning sign. Supplements are not medicines and cannot make those claims." },
+        { "type": "p", "text": "[CONTENT PLACEHOLDER — add any wording approved by your regulatory and legal reviewers.]" }
+      ]
+    },
+    {
+      "id": "post-3",
+      "slug": "discreet-delivery-and-payment",
+      "title": "Discreet Delivery and Payment: What to Expect",
+      "category": "Orders and delivery",
+      "publishedAt": "2026-10-01",
+      "readingMinutes": 4,
+      "image": "assets/img/pack-6.jpg",
+      "excerpt": "How orders are packed, what appears on a statement, and which payment methods are accepted.",
+      "body": [
+        { "type": "p", "text": "Discretion is a design decision, not a promise we make about other people. Here is exactly what happens to an order after checkout." },
+        { "type": "h2", "text": "Packaging" },
+        { "type": "p", "text": "Orders leave our warehouse in plain outer packaging with no product names, no imagery and no indication of the contents. The only label on the outside is the delivery label required by the courier." },
+        { "type": "h2", "text": "On your statement" },
+        { "type": "p", "text": "Card payments are processed by our payment provider and appear under the trading name shown at checkout. If you need the exact descriptor before ordering, contact support and we will confirm it." },
+        { "type": "h2", "text": "Payment methods" },
+        { "type": "list", "items": ["Visa", "Mastercard", "Verve", "Paystack", "Bank transfer where available"] },
+        { "type": "h2", "text": "Age verification" },
+        { "type": "p", "text": "This store is for adults aged 18 and over. Orders require confirmation that the buyer is 18 or older, and delivery companies may ask for identification on delivery." },
+        { "type": "p", "text": "[CONTENT PLACEHOLDER — add any wording approved by your regulatory and legal reviewers.]" }
+      ]
+    }
+  ]
+}

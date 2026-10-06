@@ -1,0 +1,4 @@
+[15884:6236:1003/023558.471:ERROR:components\os_crypt\async\browser\os_crypt_win.cc:63] Failed to encrypt: The system cannot find the file specified. (0x2)
+[15884:17624:1003/023558.589:ERROR:chrome\installer\util\google_update_settings_win.cc:270] Failed opening key Software\Google\Update\ClientStateMedium\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5
+[15884:18324:1003/023559.315:ERROR:components\password_manager\core\browser\password_store\login_database_async_helper.cc:99] Encryption is not available.
+[15884:14876:1003/023559.577:ERROR:components\password_manager\core\browser\password_store\login_database_async_helper.cc:99] Encryption is not available.
