@@ -60,8 +60,12 @@ function inStoreOrder(products) {
     Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || a.price - b.price);
 }
 
-/* Mirrors productCardTemplate() in frontend/js/ui.js. Keep both in step. */
-function productCard(product, indent) {
+/* Mirrors productCardTemplate() in frontend/js/ui.js. Keep both in step.
+   Pass { decorative: true } for the repeated half of the marquee rail: those
+   cards are hidden from assistive tech and skipped by the tab order. */
+function productCard(product, indent, options) {
+  const opts = options || {};
+  const off = opts.decorative ? ' tabindex="-1"' : "";
   const pad = " ".repeat(indent);
   const image = (product.images || [])[0] || { src: "assets/img/product-single.jpg", alt: product.name };
   const inStock = typeof product.inStock === "boolean" ? product.inStock : Number(product.stockQty || 1) > 0;
@@ -81,7 +85,7 @@ function productCard(product, indent) {
   lines.push(
     pad + "  </div>",
     pad + '  <div class="gb-product-card__body">',
-    pad + '    <h3 class="gb-product-card__title"><a href="' + href + '">' + esc(product.name) + "</a></h3>",
+    pad + '    <h3 class="gb-product-card__title"><a href="' + href + '"' + off + ">" + esc(product.name) + "</a></h3>",
     pad + '    <p class="gb-product-card__meta">' + esc(product.shortName || product.netContent || "") + "</p>",
     pad + '    <div class="gb-product-card__price">',
     pad + '      <span class="gb-price">' + money(product.price) + "</span>"
@@ -91,8 +95,8 @@ function productCard(product, indent) {
     pad + "    </div>",
     pad + '    <div class="gb-product-card__actions">',
     inStock
-      ? pad + '      <button type="button" class="gb-btn gb-btn--outline gb-btn--sm gb-btn--block" data-add-to-cart="' + esc(product.id) + '">Add to bag</button>'
-      : pad + '      <button type="button" class="gb-btn gb-btn--outline gb-btn--sm gb-btn--block" disabled aria-disabled="true">Out of stock</button>',
+      ? pad + '      <button type="button" class="gb-btn gb-btn--outline gb-btn--sm gb-btn--block" data-add-to-cart="' + esc(product.id) + '"' + off + ">Add to bag</button>"
+      : pad + '      <button type="button" class="gb-btn gb-btn--outline gb-btn--sm gb-btn--block" disabled aria-disabled="true"' + off + ">Out of stock</button>",
     pad + "    </div>",
     pad + "  </div>",
     pad + "</article>"
@@ -107,6 +111,39 @@ function productGrid(products, options) {
   const list = inStoreOrder(products).slice(0, opts.limit || products.length);
   const cards = list.map((product) => productCard(product, indent + 2)).join("\n");
   return pad + '<div class="gb-grid ' + (opts.className || "gb-grid--3") + '" id="' + opts.id + '">' + "\n" + cards + "\n" + pad + "</div>";
+}
+
+/* The product rail behind the Best sellers section (initMarquee() in
+   frontend/js/ui.js drives the speed and the pause control).
+   The list is rendered twice inside one track: the CSS animation slides the
+   track by exactly 50% of its own width, so the second half lands pixel for
+   pixel where the first half started and the loop never jumps. */
+function productMarquee(products, options) {
+  const opts = options || {};
+  const indent = opts.indent === undefined ? 8 : opts.indent;
+  const pad = " ".repeat(indent);
+  const list = inStoreOrder(products).slice(0, opts.limit || products.length);
+  const rail = list.concat(list);
+  const items = rail.map((product, index) => {
+    const decorative = index >= list.length;
+    const itemAttrs = decorative ? ' aria-hidden="true" inert' : "";
+    return pad + "    <li class=\"gb-marquee__item\"" + itemAttrs + ">\n" +
+      productCard(product, indent + 6, { decorative }) + "\n" +
+      pad + "    </li>";
+  }).join("\n");
+  return [
+    pad + '<div class="gb-marquee" id="' + opts.id + '" data-marquee data-marquee-speed="' + (opts.speed || 55) + '"' +
+      (opts.label ? ' role="group" aria-label="' + esc(opts.label) + '"' : "") + ">",
+    pad + '  <div class="gb-marquee__controls">',
+    pad + '    <button type="button" class="gb-marquee__toggle" data-marquee-toggle aria-pressed="false">Pause scrolling</button>',
+    pad + "  </div>",
+    pad + '  <div class="gb-marquee__viewport">',
+    pad + '    <ul class="gb-marquee__group" data-marquee-group>',
+    items,
+    pad + "    </ul>",
+    pad + "  </div>",
+    pad + "</div>"
+  ].join("\n");
 }
 
 const SHOP_PAGE_ITEMS = inStoreOrder(ALL_PRODUCTS).slice(0, SHOP_PER_PAGE);
@@ -685,7 +722,7 @@ ${productGrid(FEATURED_PRODUCTS, { indent: 8, className: "gb-grid--3", id: "feat
           <h2 id="best-sellers-title">Best sellers</h2>
           <p class="gb-lead">The packs our customers come back for, priced in US dollars. Add a pack to your bag and check out in the currency for your country.</p>
         </div>
-${productGrid(BEST_SELLER_PRODUCTS, { indent: 8, className: "gb-grid--4", id: "best-sellers", limit: 4 })}
+${productMarquee(BEST_SELLER_PRODUCTS, { indent: 8, id: "best-sellers", label: "Best sellers", speed: 55, limit: 4 })}
         <p class="gb-text-center gb-mt-6"><a class="gb-btn gb-btn--outline" href="shop.html">Shop all packs</a></p>
       </div>
     </section>
