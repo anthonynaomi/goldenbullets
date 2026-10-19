@@ -289,7 +289,7 @@
   color: var(--gb-ink);
   transition: border-color var(--gb-dur-fast) var(--gb-ease), box-shadow var(--gb-dur-fast) var(--gb-ease);
 }
-.gb-input::placeholder, .gb-textarea::placeholder { color: #9A9385; }
+.gb-input::placeholder, .gb-textarea::placeholder { color: #7D6549; }
 .gb-input:hover, .gb-select:hover, .gb-textarea:hover { border-color: var(--gb-gold); }
 .gb-input:focus, .gb-select:focus, .gb-textarea:focus {
   border-color: var(--gb-gold-strong);

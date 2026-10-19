@@ -8,20 +8,20 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Brand palette - discreet, warm, high contrast */
-  --gb-black: #0B0A08;
-  --gb-ink: #16130D;
-  --gb-ink-soft: #2A251C;
+  --gb-brown: #3A2415;
+  --gb-ink: #231710;
+  --gb-ink-soft: #342317;
   --gb-gold: #C9A24B;
-  --gb-gold-strong: #A8801F;
-  --gb-gold-soft: #E7D6A8;
-  --gb-cream: #F7F2E8;
-  --gb-sand: #EFE7D7;
-  --gb-sand-deep: #E2D5BC;
-  --gb-white: #FFFFFF;
-  --gb-muted: #655E50;
-  --gb-muted-on-dark: #C4BBAA;
-  --gb-line: #DDD1B9;
-  --gb-line-dark: #33302A;
+  --gb-gold-strong: #67440F;
+  --gb-gold-soft: #EBD6A8;
+  --gb-cream: #E4CFB2;
+  --gb-sand: #D6B993;
+  --gb-sand-deep: #C5A47A;
+  --gb-white: #F6EDDF;
+  --gb-muted: #59422C;
+  --gb-muted-on-dark: #D6C5B0;
+  --gb-line: #C2A27B;
+  --gb-line-dark: #483527;
   --gb-danger: #9E1F26;
   --gb-danger-soft: #FBEDED;
   --gb-success: #276148;
@@ -155,7 +155,7 @@ li + li { margin-top: var(--gb-space-1); }
 
 img, svg, video { max-width: 100%; height: auto; display: block; }
 
-img { background-color: var(--gb-sand); }
+img { background-color: var(--gb-white); }
 
 a {
   color: var(--gb-gold-strong);
