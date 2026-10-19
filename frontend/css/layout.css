@@ -464,7 +464,7 @@
 }
 @media (min-width: 900px) {
   .gb-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .gb-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .gb-grid--4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 /* Common two-column content layout */

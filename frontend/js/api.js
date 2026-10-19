@@ -249,14 +249,14 @@ const DEFAULT_CURRENCIES = [
 ];
 
 export const DEFAULT_COUNTRIES = [
-  { code: "NG", name: "Nigeria", currency: "NGN" },
   { code: "US", name: "United States", currency: "USD" },
   { code: "GB", name: "United Kingdom", currency: "GBP" },
   { code: "IE", name: "Ireland", currency: "EUR" },
   { code: "ZA", name: "South Africa", currency: "ZAR" },
   { code: "KE", name: "Kenya", currency: "KES" },
   { code: "GH", name: "Ghana", currency: "GHS" },
-  { code: "OT", name: "Rest of world", currency: "USD" }
+  { code: "NG", name: "Nigeria", currency: "NGN" }
+  
 ];
 
 let runtimeConfig = null;
